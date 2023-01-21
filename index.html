@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"  ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tada!</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.js" integrity="sha512-klc+qN5PPscoGxSzFpetVsCr9sryi2e2vHwZKq43FdFyhSAa7vAqog/Ifl8tzg/8mBZiG2MAKhyjH5oPJp65EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-controller="QnrController as vm" class="container">
+
+    <main class="m-3 p-3">
+        <div class="container" id="question">
+            <h5>{{vm.question.text}}</h5>
+            <div>
+                <div class="form-check" ng-repeat="answer in vm.question.answers">
+                    <input class="form-check-input" type="radio" name="radio" ng-attr-id="{{ 'radio-' + answer.val }}" ng-model="answer.val">
+                    <label class="form-check-label" ng-attr-for="{{ 'radio-' + answer.val }}">
+                      {{answer.text}}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-around">
+            <button type="button" class="btn btn-outline-dark" ng-click="vm.back()">Back</button>
+            <button type="button" class="btn btn-outline-dark" ng-click="vm.next()">Next</button>
+        </div>
+    </main>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
