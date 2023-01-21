@@ -25,7 +25,8 @@ app.controller('QnrController', function QnrController($scope) {
                     'val': 4,
                     'text' : 'fish',
                 },
-            ]
+            ],
+            'value' : null,
         },
         {
             'text' : 'favorite food',
@@ -46,7 +47,8 @@ app.controller('QnrController', function QnrController($scope) {
                     'val': 4,
                     'text' : 'sarma',
                 },
-            ]
+            ],
+            'value' : null,
         },
         {
             'text' : 'favorite music',
@@ -67,7 +69,8 @@ app.controller('QnrController', function QnrController($scope) {
                     'val': 4,
                     'text' : 'electro',
                 },
-            ]
+            ],
+            'value' : null,
         },
     ]
 
